@@ -108,52 +108,46 @@ PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, 취업정보 
 
 ### Database
 
-#### user 테이블
+#### users 테이블
 
-| 필드명         | 데이터명 | null     | 추가 사항                       | 설명          |
-| :------------- | -------- | -------- | ------------------------------- | :------------ |
-| num            | int      | not null | **auto_increment, primary key** | 사용자 넘버   |
-| id             | char(20) | not null |                                 | 아이디        |
-| nickname       | char(20) | not null |                                 | 닉네임        |
-| name           | char(20) | not null |                                 | 이름          |
-| gender         | char(1)  | not null |                                 | 성별          |
-| post_num       | char(8)  | not null |                                 | 우편번호      |
-| address        | char(40) | not null |                                 | 이메일 주소   |
-| tel            | char(20) | not null |                                 | 전화번호      |
-| age            | int      | not null |                                 | 나이          |
-| role           | char(1)  | not null |                                 | 역할(우선도)  |
-| user_post_no   | int      | not null | **foreign key**                 | 게시글 넘버   |
-| user_credit_no | int      | not null | **foreign key**                 | 학점관리 넘버 |
+| 필드명   | 데이터명 | null     | 추가 사항                       | 설명         |
+| :------- | -------- | -------- | ------------------------------- | :----------- |
+| num      | int      | not null | **auto_increment, primary key** | 사용자 넘버  |
+| id       | char(20) | not null |                                 | 아이디       |
+| pass     | char(20) | not null |                                 | 비밀번호     |
+| nickname | char(20) | not null |                                 | 닉네임       |
+| email    | char(40) | not null |                                 | 이메일 주소  |
+| role     | char(1)  | not null |                                 | 역할(우선도) |
 
-#### post 테이블
+#### posts 테이블
 
-| 필드명          | 데이터명   | null     | 추가 사항                       | 설명        |
-| :-------------- | ---------- | -------- | ------------------------------- | :---------- |
-| num             | int        | not null | **auto_increment, primary key** | 게시글 넘버 |
-| title           | char(100)  | not null |                                 | 게시글 제목 |
-| content         | char(4000) | not null |                                 | 게시글 내용 |
-| option          | char(1)    | not null |                                 | 게시글 옵션 |
-| post_user_no    | int        | not null | **foreign key**                 | 작성자 넘버 |
-| post_comment_no | int        | not null | **foreign key**                 | 댓글 넘버   |
+| 필드명       | 데이터명   | null     | 추가 사항                       | 설명        |
+| :----------- | ---------- | -------- | ------------------------------- | :---------- |
+| num          | int        | not null | **auto_increment, primary key** | 게시글 넘버 |
+| title        | char(50)   | not null |                                 | 게시글 제목 |
+| content      | char(2000) | not null |                                 | 게시글 내용 |
+| option       | char(1)    | not null |                                 | 게시글 옵션 |
+| post_user_no | int        | not null | **foreign key**                 | 작성자 넘버 |
 
-#### comment 테이블
+#### comments 테이블
 
-| 필드명          | 데이터명   | null     | 추가 사항                       | 설명        |
-| :-------------- | ---------- | -------- | ------------------------------- | :---------- |
-| num             | int        | not null | **auto_increment, primary key** | 댓글 넘버   |
-| content         | char(1000) | not null |                                 | 댓글 내용   |
-| option          | char(1)    | not null |                                 | 댓글 옵션   |
-| comment_post_no | int        | not null | **foreign key**                 | 게시글 넘버 |
-| comment_user_no | int        | not null | **foreign key**                 | 작성자 넘버 |
+| 필드명            | 데이터명  | null     | 추가 사항                       | 설명        |
+| :---------------- | --------- | -------- | ------------------------------- | :---------- |
+| c_num             | int       | not null | **auto_increment, primary key** | 댓글 넘버   |
+| c_content         | char(400) | not null |                                 | 댓글 내용   |
+| c_option          | char(1)   | not null |                                 | 댓글 옵션   |
+| c_comment_user_no | int       | not null | **foreign key**                 | 작성자 넘버 |
+| c_comment_post_no | int       | not null | **foreign key**                 | 게시글 넘버 |
 
-#### credit 테이블
+#### scores 테이블
 
-| 필드명 | 데이터명 | null     | 추가 사항                       | 설명          |
-| :----- | -------- | -------- | ------------------------------- | :------------ |
-| num    | int      | not null | **auto_increment, primary key** | 학점관리 넘버 |
-| name   | char(30) | not null |                                 | 과목 이름     |
-| score  | char(2)  | not null |                                 | 과목 점수     |
-| credit | float    | not null |                                 | 과목 학점     |
+| 필드명    | 데이터명 | null     | 추가 사항                       | 설명          |
+| :-------- | -------- | -------- | ------------------------------- | :------------ |
+| s_num     | int      | not null | **auto_increment, primary key** | 학점관리 넘버 |
+| s_name    | char(30) | not null |                                 | 과목 이름     |
+| s_score   | char(3)  | not null |                                 | 과목 점수     |
+| s_credit  | float    | not null |                                 | 과목 학점     |
+| s_user_no | int      | not null | **foreign key**                 | 유저 넘버     |
 
 <!-- #### mail 테이블
 
