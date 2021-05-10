@@ -1,4 +1,4 @@
 .jobs-screen {
   display: flex;
-  margin-left: var(--main-sidebar-margin);
+  margin-left: var(--sidebar-margin);
 }
