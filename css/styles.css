@@ -6,6 +6,7 @@
 /* Components */
 @import "components/search-box.css";
 @import "components/side-bar.css";
+@import "components/gotop-btn.css";
 
 /* Screens */
 @import "screens/community-screen.css";
