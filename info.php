@@ -2,31 +2,14 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <title>To meet Neighbor | 메인화면</title>
+    <title>To meet Neighbor | Info</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
     />
   </head>
-
-  <!-- fakeDB -->
-  <?php
-    include './php/modules/fake_db.php';
-  ?>
-
   <body>
-    <!-- 세션 등록 -->
-    <?php
-      // session_start();
-      // $_SESSION['userid'] = "test";
-    ?>
-    <!-- 세션 해제 -->
-    <?php
-      // session_start();
-      // unset($_SESSION['userid']);
-    ?>
-
     <header></header>
 
     <nav class="sidebar">
@@ -37,11 +20,20 @@
       <?php include './php/partials/top_btn.php'; ?>
     </a>
 
-    <main class="main-screen area">
-      <?php
-        echo $db[0]['name']."<br>";
-        echo $db[1]['name'];
-      ?>
+    <main class="info-screen area">
+      <div class="info-title">
+        <h1>About To meet Neighbor</h1>
+      </div>
+      <div class="about-us-body">
+        <div class="about-goal">
+          <div class="about-goal-img">
+            <img class="white-group" src="images/icon-white-group.png">
+          </div>
+          <div>
+            <div class="about-goal-text"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer></footer>

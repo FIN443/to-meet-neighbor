@@ -29,4 +29,9 @@
 body {
   height: 100vh;
   font-family: "Open Sans", sans-serif;
+  background: #f8f8f8;
+}
+
+.area {
+  margin-left: var(--sidebar-margin);
 }
