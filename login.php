@@ -21,15 +21,15 @@
     </a>
 
     <main class="login-screen area">
-      <form action="#" class="login-form">
+      <form action="./php/modules/login.php" class="login-form" name="login_form" method="post" >
         <h1>로그인</h1>
         <div class="login-form__text-box">
-          <input type="text" required>
+          <input type="text" required name="id">
           <div class="login-form__text-box--placeholder">아이디</div>
         </div>
 
         <div class="login-form__text-box">
-          <input type="password" required>
+          <input type="password" required name="password">
           <div class="login-form__text-box--placeholder">비밀번호</div>
           <div class="login-form__text-box--show-password fas fa-eye-slash"></div>
         </div>

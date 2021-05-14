@@ -5,7 +5,7 @@ const showPassword = document.querySelector(
 );
 
 function handdleCheck() {
-  if (fields[0].value != "" && fields[1].value != "") {
+  if (fields[0].value.length >= 4 && fields[1].value.length >= 8) {
     btn.disabled = false;
   } else {
     btn.disabled = true;
@@ -24,6 +24,10 @@ function handdleShow() {
   }
 }
 
-fields[0].addEventListener("keyup", handdleCheck);
-fields[1].addEventListener("keyup", handdleCheck);
-showPassword.addEventListener("click", handdleShow);
+function init() {
+  fields[0].addEventListener("keyup", handdleCheck);
+  fields[1].addEventListener("keyup", handdleCheck);
+  showPassword.addEventListener("click", handdleShow);
+}
+
+init();
