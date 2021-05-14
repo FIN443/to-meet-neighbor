@@ -1,3 +1,8 @@
+<!-- 임시 저장소 -->
+<?php include './php/modules/fake_db.php'; ?>
+<!-- 로그인 상태 확인 -->
+<?php include './php/session/session_check.php'; ?>
+
 <a href="./" class="sidebar__title">
   <i></i>
   <div class="sidebar__title--span">
@@ -22,8 +27,17 @@
 <div class="sidebar__nav-user">
   <!-- 세션 안됬을 때 -->
   <?php
-    if(!isset($_SESSION['userid'])) {
+    if(isset($_SESSION['userid'])) {
   ?>
+  <a href="./php/modules/logout.php" class="sidebar__nav-user--login">
+    <i class="fas fa-sign-in-alt fa-lg"></i>
+    <span>로그아웃</span>
+  </a>
+  <?php
+    }
+    else {
+  ?>
+  <!-- 세션 됬을 때 -->
   <a href="./login.php" class="sidebar__nav-user--login">
     <i class="fas fa-sign-in-alt fa-lg"></i>
     <span>로그인</span>
@@ -32,15 +46,7 @@
     <i class="fas fa-door-open fa-lg"></i>
     <span>회원가입</span>
   </a>
-  <?php
-    }
-    else {
-  ?>
-  <!-- 세션 됬을 때 -->
-  <a href="#" class="sidebar__nav-user--login">
-    <i class="fas fa-sign-in-alt fa-lg"></i>
-    <span>로그아웃</span>
-  </a>
+  
   <?php
     }
   ?>

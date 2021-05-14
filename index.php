@@ -9,24 +9,7 @@
       href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
     />
   </head>
-
-  <!-- fakeDB -->
-  <?php
-    include './php/modules/fake_db.php';
-  ?>
-
   <body>
-    <!-- 세션 등록 -->
-    <?php
-      // session_start();
-      // $_SESSION['userid'] = "test";
-    ?>
-    <!-- 세션 해제 -->
-    <?php
-      // session_start();
-      // unset($_SESSION['userid']);
-    ?>
-
     <header></header>
 
     <nav class="sidebar">
@@ -39,8 +22,8 @@
 
     <main class="main-screen area">
       <?php
-        echo $db[0]['name']."<br>";
-        echo $db[1]['name'];
+        if(isset($_SESSION['userid']))
+          echo "안녕하세요 {$username} 님";
       ?>
     </main>
 
