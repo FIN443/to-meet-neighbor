@@ -29,11 +29,17 @@
           <div class="about-section-row">
             <div class="about-section-col">
               <div class="about">
-                <p id="text-center">
-                  To meet Neighbor는 취업을 준비하는 학생들을 위한 커뮤니티 플랫폼입니다. 우리는 이 사이트를 통해 학생들에게 정보공유,
-                  스터디 구인, 소통의 장 마련 등 여러 기능을 제공하여 학생분들에게 조금이나마 도움이 되고자 합니다. 
-                </p>
-                <a class="more-btn" href="#">Read more</a>
+                  <p class="text">
+                    To meet Neighbor는 취업을 준비하는 취준생들을 위한 커뮤니티 플랫폼입니다. 
+                    저희는 이 사이트를 통해 취준생 분들에게 정보공유, 스터디 구인, 소통의 장 마련 등 여러 기능을 제공하여 조금이나마 도움이 되고자 합니다.<br> 
+                    <span class="dots"></span>
+                    <span class="moreText">
+                      특히 코로나로 인하여 많은 활동이 제약된 대학생분들에게 정보를 얻을 수 있도록 도움을 드리고자 하는 목적이 가장 크다고 할 수 있습니다.
+                      저희는 많은 학생분들이 이 사이트를 통해 지식들을 서로 공유하여 
+                      많은 정보를 얻고, 거기에 더해 취업이라는 목표뿐만 아니라 자신의 가치를 찾아가실 수 있으면 좋겠다는 생각을 가지고 이 사이트를 만들게 되었습니다.
+                    </span>
+                  </p>
+                 <a class="more-btn" href="#">Read more</a>
               </div>
             </div>
            <div class="about-section-col">
@@ -67,26 +73,9 @@
          </div>
        </div>
       </div>
-      
-
-      <!--
-      <div class="info-title">
-        <h1>About To meet Neighbor</h1>
-      </div>
-      <div class="about-us-body">
-        <div class="about-goal">
-          <div class="about-goal-img">
-            <img class="white-group" src="images/icon-white-group.png">
-          </div>
-          <div>
-            <div class="about-goal-text"></div>
-          </div>
-        </div>
-      </div>
-      !-->
-
     </main>
 
     <footer></footer>
+    <script src="js/more.js"></script>
   </body>
 </html>

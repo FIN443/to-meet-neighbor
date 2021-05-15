@@ -54,11 +54,6 @@
   padding-right: 30px;
 }
 
-.about p{
-  text-align: justify;
-  margin-bottom: 20px;
-}
-
 .about a{
   display: inline-block;
   color: #3498db;
@@ -76,6 +71,7 @@
 
 .skills{
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 .skill{
@@ -96,19 +92,30 @@
   height: 12px;
   background: #3498db;
   border-radius: 12px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
 }
 .p1{
-  width: 90%;
+  width: 55.1%;
 }
 
 .p2{
-  width: 70%;
+  width: 41.2%;
 }
 
 .p3{
-  width: 50%;
+  width: 5.6%;
 }
 
+.title{
+  padding-bottom: 8px;
+}
 .progress-bar span{
   float: right;
   margin-right: 6px;
@@ -131,12 +138,11 @@
   }
 }
 
-.more-btn{
-  padding-bottom: 30px;
-}
-
-#text-center{
+.text {
+  text-align: justify;
   font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 120%;
 }
 
 #develop-lang{
@@ -144,3 +150,14 @@
   font-weight: bold;
   font-size: 17px;
 }
+
+.moreText{
+  display: none;
+}
+.text.show-more .moreText{
+  display: inline;
+}
+.text.show-more .dots{
+  display: none;
+}
+
