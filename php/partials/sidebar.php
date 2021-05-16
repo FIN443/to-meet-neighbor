@@ -29,7 +29,7 @@
   <?php
     if(isset($_SESSION['userid'])) {
   ?>
-  <a href="./php/modules/logout.php" class="sidebar__nav-user--login">
+  <a href="./php/modules/db_logout.php" class="sidebar__nav-user--login">
     <i class="fas fa-sign-in-alt fa-lg"></i>
     <span>로그아웃</span>
   </a>

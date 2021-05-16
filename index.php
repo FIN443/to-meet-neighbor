@@ -22,7 +22,7 @@
 
     <main class="main-screen area">
       <?php
-        if(isset($_SESSION['userid']))
+        if(isset($_SESSION['username']))
           echo "안녕하세요 {$username} 님";
       ?>
     </main>
