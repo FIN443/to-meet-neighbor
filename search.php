@@ -2,7 +2,7 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <title>To meet Neighbor | 글쓰기</title>
+    <title>To meet Neighbor | 검색</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
@@ -17,10 +17,10 @@
     <a class="gotop-btn" href="#">
       <?php include './php/partials/top_btn.php'; ?>
     </a>
-    
-    <header class="area"></header>
 
-    <main class="post-screen area"></main>
+    <header class="area"></header>
+    
+    <main class="search-screen area"></main>
 
     <footer class="area"></footer>
   </body>

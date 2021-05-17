@@ -1,5 +1,5 @@
 <?php
-    include './db_config.php';
+    include './php/modules/db_config.php';
 
     if(isset($_POST["join_btn"])) {
         $user_id = $_POST["user_id"];
@@ -13,11 +13,6 @@
             ?>
             <h1>가입되었습니다.</h1>
             <a href="./../../index.php">메인으로 돌아가기</a>
-            <?php
-        } else {
-            ?>
-            <h1>이미 존재하는 아이디입니다.</h1>
-            <a href="./../../join.php">회원가입으로 돌아가기</a>
             <?php
         }
     }

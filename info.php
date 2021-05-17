@@ -10,8 +10,6 @@
     />
   </head>
   <body>
-    <header></header>
-
     <nav class="sidebar">
       <?php include './php/partials/sidebar.php'; ?>
     </nav>
@@ -19,6 +17,8 @@
     <a class="gotop-btn" href="#">
       <?php include './php/partials/top_btn.php'; ?>
     </a>
+
+    <header class="area"></header>
 
     <main class="info-screen area">
       <div class="info-title">
@@ -36,6 +36,6 @@
       </div>
     </main>
 
-    <footer></footer>
+    <footer class="area"></footer>
   </body>
 </html>
