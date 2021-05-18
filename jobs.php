@@ -10,8 +10,6 @@
     />
   </head>
   <body>
-    <header></header>
-
     <nav class="sidebar">
       <?php include './php/partials/sidebar.php'; ?>
     </nav>
@@ -20,8 +18,10 @@
       <?php include './php/partials/top_btn.php'; ?>
     </a>
 
+    <header class="area"></header>
+
     <main class="jobs-screen area"></main>
 
-    <footer></footer>
+    <footer class="area"></footer>
   </body>
 </html>

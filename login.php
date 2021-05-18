@@ -10,7 +10,7 @@
     />
   </head>
   <body>
-    <header></header>
+    <?php include './php/modules/db_login.php' ?>
 
     <nav class="sidebar">
       <?php include './php/partials/sidebar.php'; ?>
@@ -20,8 +20,10 @@
       <?php include './php/partials/top_btn.php'; ?>
     </a>
 
+    <header class="area"></header>
+    
     <main class="login-screen area">
-      <form action="./php/modules/db_login.php" class="login-form" name="login_form" method="post" >
+      <form action="./login.php" class="login-form" name="login_form" method="post" >
         <h1>로그인</h1>
         <div class="login-form__text-box">
           <input type="text" required name="user_id">
@@ -51,10 +53,20 @@
         <br>
         <a href="#">계정 찾기</a>
         <a href="#">계정 생성</a>
+
+        <?php
+          if (isset($_POST["login_btn"])) {
+            if(!isset($row)) {
+              ?>
+                <span class="login-screen__alert">아이디 또는 비밀번호가 일치하지 않습니다.</span>
+              <?php
+            }
+          }
+        ?>
       </form>
     </main>
-
-    <footer></footer>
+    
+    <footer class="area"></footer>
 
     <script src="js/login.js"></script>
   </body>

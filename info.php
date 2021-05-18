@@ -11,8 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-sclae=1.0">
   </head>
   <body>
-    <header></header>
-
     <nav class="sidebar">
       <?php include './php/partials/sidebar.php'; ?>
     </nav>
@@ -20,6 +18,8 @@
     <a class="gotop-btn" href="#">
       <?php include './php/partials/top_btn.php'; ?>
     </a>
+
+    <header class="area"></header>
 
     <main class="info-screen area">
       <div class="about-section">
@@ -75,7 +75,11 @@
       </div>
     </main>
 
+<<<<<<< HEAD
     <footer></footer>
     <script src="js/more.js"></script>
+=======
+    <footer class="area"></footer>
+>>>>>>> fb6c50d2309958554d795addb5381a79c95b77b5
   </body>
 </html>

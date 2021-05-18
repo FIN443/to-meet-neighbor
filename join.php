@@ -10,7 +10,7 @@
     />
   </head>
   <body>
-    <header></header>
+    <?php include './php/modules/db_join.php'; ?>
 
     <nav class="sidebar">
       <?php include './php/partials/sidebar.php'; ?>
@@ -19,21 +19,74 @@
     <a class="gotop-btn" href="#">
       <?php include './php/partials/top_btn.php'; ?>
     </a>
+    
+    <header class="join-header area">
+    </header>
 
     <main class="join-screen area">
-      <form action="./php/modules/db_join.php" method="post">
-        <label>아이디</label>
-        <input type="text" name="user_id" placeholder="아이디" minlength="6" required><br>
-        <label>비밀번호</label>
-        <input type="password" name="user_pass" placeholder="비밀번호" minlength="8" required><br>
-        <label>닉네임</label>
-        <input type="text" name="user_name" placeholder="닉네임" minlength="4" required><br>
-        <label>이메일</label>
-        <input type="email" name="user_email" placeholder="이메일" required><br>
-        <input type="submit" name="join_btn" value="가입"><br>
-      </form>
+      <div class="join-container">
+        <div class="join-header">
+          <span>Create Account</span>
+        </div>
+        <form class="join-form" action="./join.php" method="post" >
+          <div class="join-form__control">
+            <label>아이디</label>
+            <input class="join-form__userid join-input" type="text" name="user_id" placeholder="아이디">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+            <?php
+              if(isset($check_id)) {
+                ?>
+                  <!-- id 중복일 때 -->
+                  <span class="join-result--text">이미 존재하는 아이디입니다.</span>
+                <?php
+              }
+            ?>
+          </div>
+          <div class="join-form__control">
+            <label>비밀번호</label>
+            <input class="join-form__pass join-input" type="password" name="user_pass" placeholder="비밀번호">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="join-form__control">
+            <label>비밀번호 확인</label>
+            <input class="join-form__pass2 join-input" type="password" name="user_pass" placeholder="비밀번호 확인">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="join-form__control">
+            <label>닉네임</label>
+            <input class="join-form__name join-input" type="text" name="user_name" placeholder="사용자 별명">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+            <?php
+              if(isset($check_name)) {
+                ?>
+                  <!-- nickname 중복일 때 -->
+                  <span class="join-result--text">이미 존재하는 닉네임입니다.</span>
+                <?php
+              }
+            ?>
+          </div>
+          <div class="join-form__control">
+            <label>이메일</label>
+            <input class="join-form__email join-input" type="email" name="user_email" placeholder="example@abc.co.kr">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <button class="join-btn" type="submit" name="join_btn" disabled>가입</button>
+        </form>
+      </div>
     </main>
 
-    <footer></footer>
+    <footer class="area"></footer>
+
+    <script src="./js/join.js"></script>
   </body>
 </html>

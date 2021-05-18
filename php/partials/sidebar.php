@@ -11,11 +11,12 @@
   </div>
 </a>
 <div class="sidebar__search-box">
-  <form action="">
+  <form action="./search.php" method="get">
     <input
       class="sidebar__search-box__input"
       type="text"
       placeholder="검색어 입력"
+      name="text"
     />
     <input
       class="sidebar__search-box__btn"

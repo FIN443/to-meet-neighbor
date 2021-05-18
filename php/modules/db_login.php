@@ -1,5 +1,5 @@
 <?php
-    include "./db_config.php";
+    include "./php/modules/db_config.php";
 
     if (isset($_POST["login_btn"])) {
         $user_id = $_POST["user_id"];
@@ -14,13 +14,7 @@
             // $_SESSION["useremail"] = $row["u_email"];
             echo("
                 <script>
-                    location.href = './../../index.php';
-                </script>
-            ");
-        } else {
-            echo("
-                <script>
-                    history.go(-1);
+                    location.href = './';
                 </script>
             ");
         }
