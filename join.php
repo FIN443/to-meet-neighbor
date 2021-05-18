@@ -28,13 +28,21 @@
         <div class="join-header">
           <span>Create Account</span>
         </div>
-        <form class="join-form" action="">
+        <form class="join-form" action="./join.php" method="post" >
           <div class="join-form__control">
             <label>아이디</label>
             <input class="join-form__userid join-input" type="text" name="user_id" placeholder="아이디">
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
+            <?php
+              if(isset($check_id)) {
+                ?>
+                  <!-- id 중복일 때 -->
+                  <span class="join-result--text">이미 존재하는 아이디입니다.</span>
+                <?php
+              }
+            ?>
           </div>
           <div class="join-form__control">
             <label>비밀번호</label>
@@ -56,6 +64,14 @@
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
+            <?php
+              if(isset($check_name)) {
+                ?>
+                  <!-- nickname 중복일 때 -->
+                  <span class="join-result--text">이미 존재하는 닉네임입니다.</span>
+                <?php
+              }
+            ?>
           </div>
           <div class="join-form__control">
             <label>이메일</label>
@@ -64,8 +80,7 @@
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-
-          <button class="join-btn" disabled>가입</button>
+          <button class="join-btn" type="submit" name="join_btn" disabled>가입</button>
         </form>
       </div>
     </main>

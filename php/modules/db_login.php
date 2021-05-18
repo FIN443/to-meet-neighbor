@@ -14,7 +14,7 @@
             // $_SESSION["useremail"] = $row["u_email"];
             echo("
                 <script>
-                    location.href = './index.php';
+                    location.href = './';
                 </script>
             ");
         }

@@ -79,8 +79,8 @@ function checkEmail() {
   }
 }
 
+const submitBtn = document.querySelector(".join-btn");
 function handdleSubmit() {
-  const submitBtn = document.querySelector(".join-btn");
   const control = document.querySelectorAll(".join-form__control");
   if (
     control[0].classList.contains("success") &&
@@ -91,11 +91,13 @@ function handdleSubmit() {
   ) {
     submitBtn.disabled = false;
     submitBtn.style.backgroundColor = "#3498dbe3";
-    submitBtn.style.border = "2px solid #3498db";
+    submitBtn.style.cursor = "pointer";
+    submitBtn.style.boxShadow = "0px 0px 4px 3px rgba(44, 169, 252, 0.3)";
   } else {
     submitBtn.disabled = true;
     submitBtn.style.backgroundColor = "#8b9196e3";
-    submitBtn.style.border = "2px solid #8b9196";
+    submitBtn.style.cursor = "";
+    submitBtn.style.boxShadow = "";
   }
 }
 
