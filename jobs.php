@@ -20,7 +20,9 @@
 
     <header class="area"></header>
 
-    <main class="jobs-screen area"></main>
+    <main class="jobs-screen area">
+      <?php include "./php/modules/load_jobs.php"; ?>
+    </main>
 
     <footer class="area"></footer>
   </body>
