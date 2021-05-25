@@ -20,7 +20,8 @@
 
     <header class="area"></header>
 
-    <main class="jobs-screen area"></main>
+    <main class="jobs-screen area">
+    </main>
 
     <footer class="area"></footer>
   </body>

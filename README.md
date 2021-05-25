@@ -11,7 +11,7 @@ PHP를 사용한 유저 커뮤니티 사이트
 ## 개요
 
 **Title - 투밋네이버(To meet Neighbor)**<br>
-PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, 취업정보 등 커뮤니티 사이트 기능을 구현해보자
+PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, ~~취업정보~~ 등 커뮤니티 사이트 기능을 구현해보자
 
 ## 구성
 
@@ -19,42 +19,35 @@ PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, 취업정보 
 
 #### 메인화면
 
-- [ ] 투두리스트
-  - [ ] 예정
-  - [ ] 완료
-  - [ ] D-day 설정
 - [ ] 시계
   - [ ] 시계 그림
   - [ ] 시간
-- [ ] 날씨
-  - [ ] 섭씨(30℃)
-  - [ ] 위치
-  - [ ] 날씨(맑음, 비, 눈 등)
-- [ ] 주간 인기글 5개
-- [ ] 일간 채용 TOP5
-- [ ] 최근메일 5개
+- [ ] 투두리스트
+  - [ ] 등록
+  - [ ] 수정
+  - [ ] 완료
+  - [ ] 삭제
+- [ ] 최근 등록글 4개
+- [ ] 일간 채용(신입 경력) 3개
 
 #### 검색
 
-- [ ] 검색 양식(GET)
-  - [ ] 입력 창
-  - [ ] 버튼
+- [x] 검색 양식(GET)
+  - [x] 입력 창
+  - [x] 버튼
 
 #### 회원가입
 
 - [ ] 카카오로 가입
-- [ ] 일반 회원가입
-  - [ ] 아이디
-  - [ ] 비번
-  - [ ] 이메일
-  - [ ] 이름
-  - [ ] 전화번호
-  - [ ] 주소
-  - [ ] 이메일 수신 여부
+- [x] 일반 회원가입
+  - [x] 아이디
+  - [x] 비번
+  - [x] 이메일
+  - [x] 닉네임
 
 #### 로그인 / 로그아웃
 
-- [ ] 일반 로그인 양식(POST)
+- [x] 일반 로그인 양식(POST)
 - [ ] 카카오로 로그인
 
 ### 마이페이지
@@ -64,16 +57,9 @@ PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, 취업정보 
   - [ ] 닉네임 수정
   - [ ] 비밀번호 수정
   - [ ] 이메일 수정
-  - [ ] 주소 수정
-  - [ ] 전화번호 수정
 - [ ] 내가 쓴 글
-- [ ] 성적 관리
-  - [ ] 성적 정보
-    - [ ] 전체 평균 성적
-    - [ ] 성적 별 출력
-  - [ ] 성적 추가/수정
-    - [ ] 과목 추가
-    - [ ] 과목 별 출력(선택)
+  - [ ] 게시글 수정
+  - [ ] 게시글 삭제
 
 #### 커뮤니티
 
@@ -82,84 +68,65 @@ PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, 취업정보 
 - [ ] 구인 게시판
 - [ ] 정보 게시판
 - [ ] 스터디 게시판
-- [ ] 글쓰기
+- [ ] 게시글 작성
   - [ ] 제목
   - [ ] 태그
   - [ ] 첨부파일
   - [ ] 내용
-  - [ ] 확인
+  - [ ] 등록
   - [ ] 취소
   - [ ] 댓글
+- [ ] 게시글 수정
+  - [ ] 제목
+  - [ ] 태그
+  - [ ] 첨부파일
+  - [ ] 내용
+  - [ ] 등록
+  - [ ] 취소
+  - [ ] 게시글 삭제
 
-#### 잡코리아
+#### ~~잡코리아~~
 
-- [ ] 일간 채용
-  - [ ] 잡코리아 일간 채용 TOP100에서 HTML파싱
-  - [ ] 신입
-  - [ ] 경력
-- [ ] 공채소식
-
-<!-- #### 메일
-
-- [ ] 메일 쓰기
-- [ ] 내게 쓰기
-- [ ] 임시 보관함
-- [ ] 메일 보관함 -->
+- [ ] ~~일간 채용~~
+  - [ ] ~~신입Top10~~
+  - [ ] ~~경력Top10~~
+- [ ] ~~공채소식~~
 
 ### Database
 
 #### users 테이블
 
-| 필드명   | 데이터명 | null     | 추가 사항                       | 설명         |
-| :------- | -------- | -------- | ------------------------------- | :----------- |
-| num      | int      | not null | **auto_increment, primary key** | 사용자 넘버  |
-| id       | char(20) | not null |                                 | 아이디       |
-| pass     | char(20) | not null |                                 | 비밀번호     |
-| nickname | char(20) | not null |                                 | 닉네임       |
-| email    | char(40) | not null |                                 | 이메일 주소  |
-| role     | char(1)  | not null |                                 | 역할(우선도) |
+| 필드명     | 데이터명 | null     | 추가 사항                       | 설명           |
+| :--------- | -------- | -------- | ------------------------------- | :------------- |
+| u_num      | int      | not null | **auto_increment, primary key** | 사용자 넘버    |
+| u_id       | char(20) | not null |                                 | 아이디         |
+| u_pass     | char(20) | not null |                                 | 비밀번호       |
+| u_nickname | char(20) | not null |                                 | 닉네임         |
+| u_email    | char(40) | not null |                                 | 이메일 주소    |
+| u_date     | long     | not null |                                 | 계정 생성 날짜 |
+| u_role     | char(1)  | not null |                                 | 역할(우선도)   |
 
 #### posts 테이블
 
-| 필드명       | 데이터명   | null     | 추가 사항                       | 설명        |
-| :----------- | ---------- | -------- | ------------------------------- | :---------- |
-| num          | int        | not null | **auto_increment, primary key** | 게시글 넘버 |
-| title        | char(50)   | not null |                                 | 게시글 제목 |
-| content      | char(2000) | not null |                                 | 게시글 내용 |
-| option       | char(1)    | not null |                                 | 게시글 옵션 |
-| post_user_no | int        | not null | **foreign key**                 | 작성자 넘버 |
+| 필드명         | 데이터명   | null     | 추가 사항                       | 설명             |
+| :------------- | ---------- | -------- | ------------------------------- | :--------------- |
+| p_num          | int        | not null | **auto_increment, primary key** | 게시글 넘버      |
+| p_title        | char(50)   | not null |                                 | 게시글 제목      |
+| p_content      | char(2000) | not null |                                 | 게시글 내용      |
+| p_date         | long       | not null |                                 | 게시글 등록 날짜 |
+| p_option       | char(1)    | not null |                                 | 게시글 옵션      |
+| p_post_user_no | int        | not null | **foreign key**                 | 작성자 넘버      |
 
 #### comments 테이블
 
-| 필드명            | 데이터명  | null     | 추가 사항                       | 설명        |
-| :---------------- | --------- | -------- | ------------------------------- | :---------- |
-| c_num             | int       | not null | **auto_increment, primary key** | 댓글 넘버   |
-| c_content         | char(400) | not null |                                 | 댓글 내용   |
-| c_option          | char(1)   | not null |                                 | 댓글 옵션   |
-| c_comment_user_no | int       | not null | **foreign key**                 | 작성자 넘버 |
-| c_comment_post_no | int       | not null | **foreign key**                 | 게시글 넘버 |
-
-#### scores 테이블
-
-| 필드명    | 데이터명 | null     | 추가 사항                       | 설명          |
-| :-------- | -------- | -------- | ------------------------------- | :------------ |
-| s_num     | int      | not null | **auto_increment, primary key** | 학점관리 넘버 |
-| s_name    | char(30) | not null |                                 | 과목 이름     |
-| s_score   | char(3)  | not null |                                 | 과목 점수     |
-| s_credit  | float    | not null |                                 | 과목 학점     |
-| s_user_no | int      | not null | **foreign key**                 | 유저 넘버     |
-
-<!-- #### mail 테이블
-
-| 필드명       | 데이터명   | null     | 추가 사항       | 설명        |
-| :----------- | ---------- | -------- | --------------- | :---------- |
-| num          | int        | not null | **primary key** | 메일 넘버   |
-| sender       | char(40)   | not null |                 | 송신 주소   |
-| title        | char(100)  | not null |                 | 메일 제목   |
-| content      | char(4000) | not null |                 | 메일 내용   |
-| option       | char       | not null |                 | 메일 옵션   |
-| mail_user_no | int        | not null | **foreign key** | 사용자 넘버 |
--->
+| 필드명            | 데이터명  | null     | 추가 사항                       | 설명           |
+| :---------------- | --------- | -------- | ------------------------------- | :------------- |
+| c_num             | int       | not null | **auto_increment, primary key** | 댓글 넘버      |
+| c_content         | char(400) | not null |                                 | 댓글 내용      |
+| c_date            | long      | not null |                                 | 댓글 등록 날짜 |
+| c_option          | char(1)   | not null |                                 | 댓글 옵션      |
+| c_comment_user_no | int       | not null | **foreign key**                 | 작성자 넘버    |
+| c_comment_post_no | int       | not null | **foreign key**                 | 게시글 넘버    |
 
 <br>
 
@@ -188,13 +155,17 @@ PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, 취업정보 
 
 - Backend(기능)
 
+  - FIN443
   - cydonia0211
 
 - Frontend(디자인)
+
   - FIN443
-- Database
   - cydonia0211
+
+- Database
   - FIN443
+  - cydonia0211
 
 ## 개발 일정
 
@@ -221,5 +192,9 @@ PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, 취업정보 
 
 # 기타
 
-문제점 발생시 해결 방안 <br>
-Stack Overflow를 통한 에러 해결방안 검색.
+### 문제 발생 대처 <br>
+
+- 5월 24일 node.js하고 python으로 scrapping 기능을 구현 못함.<br>
+  > node는 서버구축 없이 패키지 사용 못하고<br>
+  > python은 운영체제에 파이썬이 설치 안되있으면 스크립트 실행 안됨.<br>
+  > php로 구현하는 방법은 어려워서 포기함<br> > [Link](https://www.scrapingbee.com/blog/web-scraping-php/)

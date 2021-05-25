@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- 생성 시간: 21-05-06 13:49
+-- 생성 시간: 21-05-19 09:35
 -- 서버 버전: 10.4.17-MariaDB
 -- PHP 버전: 8.0.2
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `comments` (
   `c_num` int(11) NOT NULL,
   `c_content` varchar(400) NOT NULL,
+  `c_date` varchar(30) NOT NULL,
   `c_option` varchar(1) NOT NULL,
   `c_user_no` int(11) NOT NULL,
   `c_post_no` int(11) NOT NULL
@@ -45,22 +46,9 @@ CREATE TABLE `posts` (
   `p_num` int(11) NOT NULL,
   `p_title` varchar(50) NOT NULL,
   `p_content` varchar(2000) NOT NULL,
+  `p_date` varchar(30) NOT NULL,
   `p_option` varchar(1) NOT NULL,
   `p_user_no` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 테이블 구조 `scores`
---
-
-CREATE TABLE `scores` (
-  `s_num` int(11) NOT NULL,
-  `s_name` varchar(30) NOT NULL,
-  `s_score` varchar(3) NOT NULL,
-  `s_credit` float NOT NULL,
-  `s_user_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -75,6 +63,7 @@ CREATE TABLE `users` (
   `u_pass` varchar(20) NOT NULL,
   `u_nickname` varchar(20) NOT NULL,
   `u_email` varchar(40) NOT NULL,
+  `u_date` varchar(30) NOT NULL,
   `u_role` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -96,13 +85,6 @@ ALTER TABLE `comments`
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`p_num`),
   ADD KEY `post_user_no` (`p_user_no`);
-
---
--- 테이블의 인덱스 `scores`
---
-ALTER TABLE `scores`
-  ADD PRIMARY KEY (`s_num`),
-  ADD KEY `score_user_no` (`s_user_no`);
 
 --
 -- 테이블의 인덱스 `users`
@@ -127,12 +109,6 @@ ALTER TABLE `posts`
   MODIFY `p_num` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 테이블의 AUTO_INCREMENT `scores`
---
-ALTER TABLE `scores`
-  MODIFY `s_num` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- 테이블의 AUTO_INCREMENT `users`
 --
 ALTER TABLE `users`
@@ -154,12 +130,6 @@ ALTER TABLE `comments`
 --
 ALTER TABLE `posts`
   ADD CONSTRAINT `post_user_no` FOREIGN KEY (`p_user_no`) REFERENCES `users` (`u_num`);
-
---
--- 테이블의 제약사항 `scores`
---
-ALTER TABLE `scores`
-  ADD CONSTRAINT `score_user_no` FOREIGN KEY (`s_user_no`) REFERENCES `users` (`u_num`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

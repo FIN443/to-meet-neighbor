@@ -69,7 +69,7 @@
         ><i class="fas fa-comments fa-lg"></i>커뮤니티</a
       >
       <div class="sidebar__nav--menu__item__sub">
-        <a href="#">통합 게시판</a>
+        <a href="post.php">통합 게시판</a>
         <a href="#">자유 게시판</a>
         <a href="#">구인 게시판</a>
         <a href="#">정보 게시판</a>
