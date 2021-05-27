@@ -75,11 +75,9 @@
       </div>
     </main>
 
-<<<<<<< HEAD
+
     <footer></footer>
     <script src="js/more.js"></script>
-=======
     <footer class="area"></footer>
->>>>>>> fb6c50d2309958554d795addb5381a79c95b77b5
   </body>
 </html>

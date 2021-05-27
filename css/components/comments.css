@@ -1,0 +1,75 @@
+.whole_section{
+    padding-bottom: 4rem;
+  }
+  .comment_section{
+      margin-top: 3rem;
+      color: rgb(52, 58, 64);
+  }
+  
+  .comment_box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;  
+    -webkit-box-pack: end;
+  }
+  .comment_text{
+      resize: none;
+      padding: 1rem 1rem 1.5rem;
+      outline: none;
+      border: 1px solid rgb(233, 236, 239);
+      margin-bottom: 1.5rem;
+      width: 100%;
+      border-radius: 4px;
+      min-height: 6.125rem;
+      font-size: 1rem;
+      color: rgb(33, 37, 41);
+      line-height: 1.75;
+  }
+  
+  .comment_btn{
+      display: inline-flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 4px;
+      padding: 0px 1.25rem;
+      height: 2rem;
+      font-size: 1rem;
+  }
+  
+  .comment_box > .btn_wrapper{
+      display: flex;
+      -webkit-box-pack: end;
+      justify-content: flex-end;
+  }
+  
+  
+  *{
+    box-sizing: inherit;
+  }
+  
+  div {
+    display: block;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased
+  }
+  
+  .post {
+      width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .comment_list_top{
+    margin-top: 2.5rem;
+  }

@@ -30,7 +30,7 @@
       <?php
         if(isset($_SESSION['userid'])) {
       ?>
-        <form action="" method="POST">
+        <form class="comment_box" action="" method="POST">
           <input type="text" placeholder="댓글을 입력해주세요." name="text" minlength="2" required>
           <input type="submit" value="등록" name="submit">
         </form>
