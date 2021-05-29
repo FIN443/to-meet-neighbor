@@ -7,9 +7,10 @@
 @import "components/search-box.css";
 @import "components/side-bar.css";
 @import "components/gotop-btn.css";
+@import "components/posts.css";
 
 /* Screens */
-@import "screens/community-screen.css";
+@import "screens/board-screen.css";
 @import "screens/find-screen.css";
 @import "screens/info-screen.css";
 @import "screens/jobs-screen.css";

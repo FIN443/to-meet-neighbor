@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- 생성 시간: 21-05-19 09:35
+-- 생성 시간: 21-05-29 08:35
 -- 서버 버전: 10.4.17-MariaDB
 -- PHP 버전: 8.0.2
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `comments` (
   `c_num` int(11) NOT NULL,
   `c_content` varchar(400) NOT NULL,
-  `c_date` varchar(30) NOT NULL,
-  `c_option` varchar(1) NOT NULL,
-  `c_user_no` int(11) NOT NULL,
+  `c_create_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `c_update_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `c_nickname` varchar(20) NOT NULL,
   `c_post_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -46,9 +46,9 @@ CREATE TABLE `posts` (
   `p_num` int(11) NOT NULL,
   `p_title` varchar(50) NOT NULL,
   `p_content` varchar(2000) NOT NULL,
-  `p_date` varchar(30) NOT NULL,
-  `p_option` varchar(1) NOT NULL,
-  `p_user_no` int(11) NOT NULL
+  `p_create_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `p_update_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `p_nickname` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -60,11 +60,10 @@ CREATE TABLE `posts` (
 CREATE TABLE `users` (
   `u_num` int(11) NOT NULL,
   `u_id` varchar(20) NOT NULL,
-  `u_pass` varchar(20) NOT NULL,
+  `u_pass` varchar(64) NOT NULL,
   `u_nickname` varchar(20) NOT NULL,
   `u_email` varchar(40) NOT NULL,
-  `u_date` varchar(30) NOT NULL,
-  `u_role` varchar(1) NOT NULL
+  `u_create_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -76,21 +75,23 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`c_num`),
-  ADD KEY `comment_user_no` (`c_user_no`),
-  ADD KEY `comment_post_no` (`c_post_no`);
+  ADD UNIQUE KEY `c_nickname` (`c_nickname`),
+  ADD UNIQUE KEY `c_post_no` (`c_post_no`);
 
 --
 -- 테이블의 인덱스 `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`p_num`),
-  ADD KEY `post_user_no` (`p_user_no`);
+  ADD UNIQUE KEY `p_nickname` (`p_nickname`);
 
 --
 -- 테이블의 인덱스 `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`u_num`);
+  ADD PRIMARY KEY (`u_num`),
+  ADD UNIQUE KEY `u_id` (`u_id`),
+  ADD UNIQUE KEY `u_nickname` (`u_nickname`);
 
 --
 -- 덤프된 테이블의 AUTO_INCREMENT
@@ -122,14 +123,14 @@ ALTER TABLE `users`
 -- 테이블의 제약사항 `comments`
 --
 ALTER TABLE `comments`
-  ADD CONSTRAINT `comment_post_no` FOREIGN KEY (`c_post_no`) REFERENCES `posts` (`p_num`),
-  ADD CONSTRAINT `comment_user_no` FOREIGN KEY (`c_user_no`) REFERENCES `users` (`u_num`);
+  ADD CONSTRAINT `comment_nickname` FOREIGN KEY (`c_nickname`) REFERENCES `users` (`u_nickname`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comment_post_no` FOREIGN KEY (`c_post_no`) REFERENCES `posts` (`p_num`) ON DELETE CASCADE;
 
 --
 -- 테이블의 제약사항 `posts`
 --
 ALTER TABLE `posts`
-  ADD CONSTRAINT `post_user_no` FOREIGN KEY (`p_user_no`) REFERENCES `users` (`u_num`);
+  ADD CONSTRAINT `post_nickname` FOREIGN KEY (`p_nickname`) REFERENCES `users` (`u_nickname`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

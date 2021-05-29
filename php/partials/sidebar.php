@@ -65,15 +65,15 @@
       </div>
     </li>
     <li class="sidebar__nav--menu__item" id="community">
-      <a href="./community.php" class="sidebar__nav--menu__item--btn"
+      <a href="./board.php" class="sidebar__nav--menu__item--btn"
         ><i class="fas fa-comments fa-lg"></i>커뮤니티</a
       >
       <div class="sidebar__nav--menu__item__sub">
-        <a href="post.php">통합 게시판</a>
-        <a href="#">자유 게시판</a>
-        <a href="#">구인 게시판</a>
-        <a href="#">정보 게시판</a>
-        <a href="#">스터디 게시판</a>
+        <a href="board.php?type=all">통합 게시판</a>
+        <a href="board.php?type=free">자유 게시판</a>
+        <a href="board.php?type=jobs">구인 게시판</a>
+        <a href="board.php?type=info">정보 게시판</a>
+        <a href="board.php?type=study">스터디 게시판</a>
       </div>
     </li>
     <li class="sidebar__nav--menu__item" id="jobs">

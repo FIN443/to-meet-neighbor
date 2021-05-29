@@ -20,7 +20,19 @@
 
     <header class="area"></header>
 
-    <main class="community-screen area"></main>
+    <main class="board-screen area">
+      <?php 
+        if(isset($_GET['type'])) {
+          if($_GET['type'] == "all" || $_GET['type'] == "free" || $_GET['type'] == "jobs" || $_GET['type'] == "info" || $_GET['type'] == "study") {
+            include './php/partials/board_show.php';
+          } else {
+            echo "Not exist";
+          }
+        } else {
+          include './php/partials/board_show.php';
+        }
+      ?>
+    </main>
 
     <footer class="area"></footer>
   </body>
