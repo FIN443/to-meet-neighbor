@@ -10,7 +10,7 @@
         $check_name = mysqli_fetch_array(mysqli_query($connect, "SELECT * FROM users WHERE u_nickname = '$user_name'"));
 
         if(!isset($check_id) && !isset($check_name)) {
-            $insert = mysqli_query($connect, "INSERT INTO `users` (`u_id`, `u_pass`, `u_nickname`, `u_email`, `u_role`) VALUES ('$user_id', '$user_pass', '$user_name', '$user_email', '0')");
+            $insert = mysqli_query($connect, "INSERT INTO `users` (`u_id`, `u_pass`, `u_nickname`, `u_email`) VALUES ('$user_id', '$user_pass', '$user_name', '$user_email')");
             session_start();
             $_SESSION["userid"] = $user_id;
             // $_SESSION["userpass"] = $user_pass;
