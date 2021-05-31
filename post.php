@@ -22,7 +22,7 @@
 
     <main class="post-screen area">
       <!-- 게시글 댓글 나열 -->
-      <?php //include './php/partials/comment_list.php'; ?>
+     
       <!-- 댓글 등록했을 때 -->
       <?php //include './php/partials/comment_submit.php'; ?>
 
@@ -30,7 +30,6 @@
       <?php
         if(isset($_SESSION['userid'])) {
       ?>
-      <?php include './php/partials/comment.php'; ?>
       <?php
         }
         else {
@@ -40,8 +39,13 @@
       <?php
         }
       ?>
+      
+      <?php 
+      include './php/partials/comment_write.php'; 
+      include './php/partials/comment_list.php'; 
+      ?>
     </main>
-
+        
     <footer class="area"></footer>
   </body>
 </html>

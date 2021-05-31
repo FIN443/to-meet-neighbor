@@ -18,7 +18,7 @@
   width: 100%;
   background: #f1f1f1;
   padding: 40px 0;
-  margin-top: 200px;
+  margin-top: 140px;
 }
 
 .inner-width{
@@ -133,18 +133,16 @@
     padding: 0;
   }
   .about{
-    text-align: center;
     padding-bottom: 10px;
   }
 }
 
-.text {
-  text-align: center;
+.text, .moreText {
+  line-height: 160%;
+  word-break: keep-all;
   font-size: 20px;
   margin-bottom: 20px;
-  line-height: 130%;
 }
-
 #develop-lang{
   padding-top: 20px;
   font-weight: bold;
@@ -153,6 +151,7 @@
 
 .moreText{
   display: none;
+
 }
 .text.show-more .moreText{
   display: inline;

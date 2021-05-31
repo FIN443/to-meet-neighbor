@@ -8,6 +8,7 @@
 @import "components/side-bar.css";
 @import "components/gotop-btn.css";
 @import "components/posts.css";
+@import "components/comments.css";
 
 /* Screens */
 @import "screens/board-screen.css";

@@ -4,7 +4,7 @@
         array('num' => 2, 'id' => 'fin443', 'password' => '123123123', 'name' => '장지훈')
     );
     $comments = array(
-        array('num' => 1, 'content' => 'python', 'user' => 'cydonia0211'),
-        array('num' => 2, 'content' => 'javascript', 'user' => 'jjhun1228')
+        array('num' => 1, 'content' => 'python', 'user' => 'cydonia0211','date'=> '5월 29일'),
+        array('num' => 2, 'content' => 'javascript', 'user' => 'jjhun1228','date'=> '5월 29일')
     );
 ?>

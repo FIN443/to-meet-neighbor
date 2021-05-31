@@ -70,65 +70,40 @@
       margin-right: auto;
   }
   
-  .comment_list_top{
-    margin-top: 2.5rem;
-  }
-  .user_area{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  .id_section{
-    margin-bottom: 1.5rem;
+  .comment_view {
+    padding: 20px 10px;
+    margin: 30px;
+    background-color: white;
     display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
+    flex-direction: column;
   }
-  .user_profile{
+  .comment_user {
+    height: 45%;
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-  }
-@media (max-width: 768px){
-  .id_section .user_profile .comment_info {
-    margin-left: 0.5rem;
-  }
-}
-.id_section .user_profile .comment_info {
-  line-height: 1;
-}
+    flex-direction: column;
+    justify-content: space-around;
+  } 
+  .comment_content {
+    height: 55%;
+    font-size: 16px;
 
-@media (max-width: 768px){
-  .id_section .user_profile .comment_info .user_name {
-    font-size: 0.875rem;
   }
-}
-.id_section .user_profile .comment_info .user_name {
-  font-weight: bold;
-  color: rgb(52, 58, 64);
-}
-
-@media (max-width: 768px){
-  .id_section .user_profile .comment_info .date {
-    font-size: 0.75rem;
+  .comment_content p {
+    display: inline-block;
+    padding: 10px 0;
   }
-}
-.id_section .user_profile .comment_info .date {
-  margin-top: 0.5rem;
-  color: rgb(134, 142, 150);
-}
+  .comment_user span {
+    display: inline-block;
+    padding: 10px 0;
 
-@media (max-width: 768px){
-  .content_section_1st{
-    font-size: 1rem;
   }
-}
-.content_section_1st {
-  color: rgb(34, 36, 38);
-    line-height: 1.7;
-    letter-spacing: -0.004em;
-    word-break: keep-all;
-    overflow-wrap: break-word;
-}
+  .comment_user span:first-child {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .comment_user span:last-child {
+    opacity: 0.6;
+    font-size: 14px;
 
+  }
+  
