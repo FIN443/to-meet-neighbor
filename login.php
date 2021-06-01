@@ -52,7 +52,7 @@
         
         <br>
         <a href="#">계정 찾기</a>
-        <a href="#">계정 생성</a>
+        <a href="join.php">계정 생성</a>
 
         <?php
           if (isset($_POST["login_btn"])) {
