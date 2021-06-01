@@ -102,10 +102,6 @@
   opacity: 0;
 }
 
-.fa-check {
-  margin-left: 4px;
-}
-
 .login-form__checkbox input:checked {
   background-color: #3db8ff98;
 }

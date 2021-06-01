@@ -61,7 +61,6 @@
       <div class="sidebar__nav--menu__item__sub">
         <a href="#">내 정보</a>
         <a href="#">내 게시글</a>
-        <a href="#">성적 관리</a>
       </div>
     </li>
     <li class="sidebar__nav--menu__item" id="community">
@@ -71,7 +70,6 @@
       <div class="sidebar__nav--menu__item__sub">
         <a href="board.php?type=all">통합 게시판</a>
         <a href="board.php?type=free">자유 게시판</a>
-        <a href="board.php?type=jobs">구인 게시판</a>
         <a href="board.php?type=info">정보 게시판</a>
         <a href="board.php?type=study">스터디 게시판</a>
       </div>
