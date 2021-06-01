@@ -2,7 +2,7 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <title>To meet Neighbor | 커뮤니티</title>
+    <title>To meet Neighbor | 게시판</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
@@ -22,14 +22,22 @@
 
     <main class="board-screen area">
       <?php 
+        if(isset($_SESSION['username'])) {
+          ?>
+          <form action="write.php" >
+            <input type="submit" value="write" >
+          </form>
+          <?php
+        }
+
         if(isset($_GET['type'])) {
           if($_GET['type'] == "all" || $_GET['type'] == "free" || $_GET['type'] == "jobs" || $_GET['type'] == "info" || $_GET['type'] == "study") {
-            include './php/partials/board_show.php';
+            include './php/partials/board_thumbnail.php';
           } else {
             echo "Not exist";
           }
         } else {
-          include './php/partials/board_show.php';
+          include './php/partials/board_thumbnail.php';
         }
       ?>
     </main>

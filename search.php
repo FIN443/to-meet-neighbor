@@ -2,7 +2,7 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <title>To meet Neighbor | 검색</title>
+    <title>To meet Neighbor | 검색결과</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"

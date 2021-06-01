@@ -1,0 +1,120 @@
+.write-content {
+  margin: 60px 100px;
+  background-color: white;
+  border-radius: 5px;
+  min-width: 600px;
+}
+
+.write__form {
+  
+  padding: 20px 60px 40px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.write__form--title {
+  border-radius: 6px;
+  padding: 30px 0 15px 15px;
+  border: none;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.write__form--title::placeholder,
+.write__form--content::placeholder {
+  opacity: 0.7;
+}
+
+.write-line {
+  background-color: black;
+  height: 2px;
+  margin-bottom: 40px;
+}
+
+.write__form--filebox {
+  display: flex;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.write__form--filebox input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.write__form--filebox label {
+  display: inline-block;
+  padding: 10px 20px;
+  min-width: 145px;
+  color: white;
+  vertical-align: middle;
+  background-color: #3498db;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.write__form--filebox label:hover {
+  transform: scale(1.05);
+}
+
+.write__form--filebox label:active {
+  transform: scale(1);
+}
+
+.filebox-text {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.filebox-text span {
+  display: inline-block;
+  padding: 10px;
+}
+
+.write__form--content {
+  height: 50vh;
+  margin: 20px 0;
+  padding: 30px;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+}
+
+.write__form--btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.write__form--submit,
+.write__form--exit {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.write__form--submit:hover,
+.write__form--exit:hover {
+  transform: scale(1.05);
+}
+
+.write__form--submit {
+  background-color: #3498db;
+  color: white;
+}

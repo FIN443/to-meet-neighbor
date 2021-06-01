@@ -2,7 +2,7 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <title>To meet Neighbor | 글쓰기</title>
+    <title>To meet Neighbor | 게시글</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"

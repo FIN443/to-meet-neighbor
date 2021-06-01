@@ -2,7 +2,7 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <title>To meet Neighbor | Jobs</title>
+    <title>To meet Neighbor | 글쓰기</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
@@ -14,13 +14,16 @@
       <?php include './php/partials/sidebar.php'; ?>
     </nav>
 
-    <a class="gotop-btn" href="#">
-      <?php include './php/partials/top_btn.php'; ?>
-    </a>
+    <?php
+      if(isset($_POST['submit'])) {
+        include "php/modules/upload_file.php";
+      }
+    ?>
 
     <header class="area"></header>
 
-    <main class="jobs-screen area">
+    <main class="mypage-screen area">
+        <?php include 'php/partials/post_write.php' ?>
     </main>
 
     <footer class="area"></footer>
