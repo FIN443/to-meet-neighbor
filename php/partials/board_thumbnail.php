@@ -33,15 +33,18 @@
                             <img src="uploads/<?=$image_url?>" >
                             <?php
                         }
-                            ?>
+                    $comments_sql = "SELECT * FROM comments WHERE c_post_no=$post_num ORDER BY c_num DESC";
+                    $comments_select = mysqli_query($connect, $comments_sql);
+                    $comments_rows = mysqli_num_rows($comments_select);
+                    ?>
                     </div>
-                    <span class="thumbnail--title"><a href=""><?php echo $title; ?></a></span>
+                    <span class="thumbnail--title"><a href=""><?= $title ?></a></span>
                     <div class="thumbnail__meta">
-                        <span class="thumbnail__meta--date"><?php echo $new_date; ?></span>
+                        <span class="thumbnail__meta--date"><?= $new_date ?></span>
                         <span> • </span>
-                        <span class="thumbnail__meta--comment">14개의 댓글</span>
+                        <span class="thumbnail__meta--comment"><?= $comments_rows ?>개의 댓글</span>
                     </div>
-                    <div class="thumbnail--writer"><span>by </span><span><?php echo $nickname; ?></span></div>
+                    <div class="thumbnail--writer"><span>by </span><span><?= $nickname ?></span></div>
                 </div>
                 <?php
                 $count++;
