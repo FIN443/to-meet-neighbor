@@ -13,7 +13,7 @@
   background-color: var(--search-box-color);
   height: 40px;
   border-radius: 40px;
-  padding: 9px;
+  padding: 4px;
 }
 
 @media screen and (max-height: 670px) {

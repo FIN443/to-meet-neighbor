@@ -17,6 +17,12 @@
     <a class="gotop-btn" href="#">
       <?php include './php/partials/top_btn.php'; ?>
     </a>
+
+    <?php
+    if(isset($_POST['submit'])) {
+      include "php/modules/db_comment.php";
+    }
+    ?>
     
     <header class="area"></header>
 
