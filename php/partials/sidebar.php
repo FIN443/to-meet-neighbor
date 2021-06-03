@@ -90,7 +90,7 @@
       </div>
     </li>
     <li class="sidebar__nav--menu__item" id="jobs">
-      <a href="./jobs.php" class="sidebar__nav--menu__item--btn"
+      <a href="#" class="sidebar__nav--menu__item--btn"
         ><i class="fas fa-building fa-lg"></i>Jobs</a
       >
       <div class="sidebar__nav--menu__item__sub">

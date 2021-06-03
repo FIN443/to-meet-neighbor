@@ -55,6 +55,7 @@
       </div>
       <div class="main__board">
         <?php include "php/partials/main_thumbnail.php"; ?>
+        <a class="main__board--more" href="board.php?type=all">More</a>
       </div>
       <div class="main__content">
         <span>추가 컨텐츠</span>
