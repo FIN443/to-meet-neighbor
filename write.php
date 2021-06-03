@@ -25,7 +25,7 @@
       }
 
       if(isset($_POST['submit'])) {
-        include "php/modules/upload_file.php";
+        include "php/modules/upload_post.php";
       }
     ?>
 

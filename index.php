@@ -14,10 +14,6 @@
       <?php include './php/partials/sidebar.php'; ?>
     </nav>
 
-    <a class="gotop-btn" href="#">
-      <?php include './php/partials/top_btn.php'; ?>
-    </a>
-
     <header class="area"></header>
 
     <main class="main-screen area">
@@ -64,7 +60,13 @@
 
     <footer class="area"></footer>
     <script src="js/clock.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <?php
+    if(isset($_SESSION['username'])) {
+    ?>
+      <script src="js/todo.js"></script>
+      <script src="js/weather.js"></script>
+    <?php
+    }
+    ?>
   </body>
 </html>

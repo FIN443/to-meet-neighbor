@@ -1,7 +1,46 @@
 .post-screen {
   display: flex;
   flex-direction: column;
-  padding: 80px 60px 40px;
+  padding: 0px 60px 40px;
+}
+
+.post_view {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.post_view__title {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.post_view__name {
+  font-weight: 600;
+}
+
+.post_view__date {
+  opacity: 0.8;
+}
+
+.post_view__info {
+  margin-bottom: 60px;
+}
+
+.post_view__img {
+  object-fit: cover;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.post_view__text {
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.post_view__content {
+  margin-bottom: 80px;
 }
 
 .comment-list--title {
