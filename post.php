@@ -35,6 +35,8 @@
     <?php
       }
     ?>
+
+    
     
     <header class="area"></header>
 
@@ -46,5 +48,6 @@
     </main>
         
     <footer class="area"></footer>
+    <script src="js/clock.js"></script>
   </body>
 </html>

@@ -10,12 +10,15 @@
         $check_name = mysqli_fetch_array(mysqli_query($connect, "SELECT * FROM users WHERE u_nickname = '$user_name'"));
 
         if(!isset($check_id) && !isset($check_name)) {
-            $insert = mysqli_query($connect, "INSERT INTO `users` (`u_id`, `u_pass`, `u_nickname`, `u_email`) VALUES ('$user_id', '$user_pass', '$user_name', '$user_email')");
+            $options = [
+                'cost' => 10,
+            ];
+            $hash = password_hash($user_pass, PASSWORD_BCRYPT, $options);
+            $insert = mysqli_query($connect, "INSERT INTO `users` (`u_id`, `u_pass`, `u_nickname`, `u_email`) VALUES ('$user_id', '$hash', '$user_name', '$user_email')");
             session_start();
             $_SESSION["userid"] = $user_id;
-            // $_SESSION["userpass"] = $user_pass;
             $_SESSION["username"] = $user_name;
-            // $_SESSION["useremail"] = $user_email;
+            $_SESSION["useremail"] = $user_email;
             ?>
             <script>
                 alert("정상가입되었습니다. 환영합니다 '<?= $user_name ?>'님");

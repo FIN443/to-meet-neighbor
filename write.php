@@ -15,6 +15,15 @@
     </nav>
 
     <?php
+      if(!isset($_SESSION['userid'])) {
+      ?>
+        <script>
+          alert("로그인 후 이용해주세요.")
+          location.href = "login.php";
+        </script>
+      <?php
+      }
+
       if(isset($_POST['submit'])) {
         include "php/modules/upload_file.php";
       }
@@ -27,5 +36,6 @@
     </main>
 
     <footer class="area"></footer>
+    <script src="js/clock.js"></script>
   </body>
 </html>

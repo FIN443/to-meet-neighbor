@@ -23,5 +23,6 @@
     <main class="find-screen area"></main>
 
     <footer class="area"></footer>
+    <script src="js/clock.js"></script>
   </body>
 </html>

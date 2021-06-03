@@ -21,12 +21,49 @@
     <header class="area"></header>
 
     <main class="main-screen area">
-      <?php
-        if(isset($_SESSION['username']))
-          echo "안녕하세요 {$username} 님";
-      ?>
+      <div class="main__info">
+        <?php
+          if(isset($_SESSION['username'])) {
+          ?>
+            <span>안녕하세요 <?=$username?> 님</span>
+            <span class="js-weather"> </span>
+          <?php
+          } else {
+          ?>
+            <p class="main__not_login">로그인 해주세요.</p>
+          <?php
+          }
+        ?>
+      </div>
+      <div class="main__todolist">
+        <?php
+          if(isset($_SESSION['username'])) {
+          ?>
+            <div class="todolist">
+              <form class="js-toDoForm showing">
+                <input type="text" placeholder="오늘 할 일" />
+              </form>
+              <ul class="js-toDoList"></ul>
+            </div>
+          <?php
+          } else {
+          ?>
+            <span class="main__not_login">로그인 해주세요.</span>
+          <?php
+          }
+        ?>
+      </div>
+      <div class="main__board">
+        <?php include "php/partials/main_thumbnail.php"; ?>
+      </div>
+      <div class="main__content">
+        <span>추가 컨텐츠</span>
+      </div>
     </main>
 
     <footer class="area"></footer>
+    <script src="js/clock.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>

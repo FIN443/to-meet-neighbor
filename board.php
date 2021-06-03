@@ -21,15 +21,10 @@
     <header class="area"></header>
 
     <main class="board-screen area">
-      <?php 
-        if(isset($_SESSION['username'])) {
-          ?>
-          <form action="write.php" >
-            <input type="submit" value="write" >
-          </form>
-          <?php
-        }
-
+      <form action="write.php" >
+        <input type="submit" value="write" >
+      </form>
+      <?php
         if(isset($_GET['type'])) {
           if($_GET['type'] == "all" || $_GET['type'] == "free" || $_GET['type'] == "jobs" || $_GET['type'] == "info" || $_GET['type'] == "study") {
             include './php/partials/board_thumbnail.php';
@@ -43,5 +38,6 @@
     </main>
 
     <footer class="area"></footer>
+    <script src="js/clock.js"></script>
   </body>
 </html>

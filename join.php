@@ -86,7 +86,7 @@
     </main>
 
     <footer class="area"></footer>
-
+    <script src="js/clock.js"></script>
     <script src="./js/join.js"></script>
   </body>
 </html>
