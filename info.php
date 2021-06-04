@@ -15,6 +15,10 @@
       <?php include './php/partials/sidebar.php'; ?>
     </nav>
 
+    <a class="gotop-btn" href="#">
+      <?php include './php/partials/top_btn.php'; ?>
+    </a>
+
     <header class="area"></header>
 
     <main class="info-screen area">

@@ -1,3 +1,45 @@
 .board-screen {
   padding: var(--screen-padding);
 }
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(78, 155, 255);
+  margin: 30px 60px 0;
+  padding: 40px;
+  padding-left: 80px;
+  border-radius: 6px;
+  min-width: 600px;
+  letter-spacing: 4px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.board-header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: white;
+}
+
+.board__write-btn {
+  border: none;
+  color: rgb(196, 221, 255);
+  background-color: rgb(112, 174, 255);
+  box-shadow: 0 0 4px 1px rgba(79, 135, 255, 0.2);
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.board__write-btn:hover {
+  color: rgb(87, 87, 87);
+  background-color: rgb(225, 238, 255);
+}
+
+.board__write-btn:active {
+  transform: scale(0.92);
+}

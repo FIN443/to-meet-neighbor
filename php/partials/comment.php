@@ -6,8 +6,5 @@
    <div class="comment_content">
       <p><?=nl2br($c_content)?></p>
    </div>
-   <div class="comment_reply_btn">
-      <span >답글 달기</span>
-   </div>
 </div>
 <hr>
