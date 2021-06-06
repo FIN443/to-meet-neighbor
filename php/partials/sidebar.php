@@ -25,6 +25,21 @@
     />
   </form>
 </div>
+<div>
+  <div class="clock__container">
+    <div class="clock__circle1"></div>
+    <div class="clock__circle2"></div>
+    <div class="clock__circle3"></div>
+    <div class="clock__hour-hand">
+      <div class="clock__white-space"></div>
+    </div>
+    <div class="clock__minute-hand">
+      <div class="clock__white-space"></div>
+    </div>
+    <div class="clock__second-hand"></div>
+    <div class="clock__center"></div>
+  </div>
+</div>
 <div class="sidebar__nav-user">
   <!-- 세션 안됬을 때 -->
   <?php
@@ -75,7 +90,7 @@
       </div>
     </li>
     <li class="sidebar__nav--menu__item" id="jobs">
-      <a href="./jobs.php" class="sidebar__nav--menu__item--btn"
+      <a href="#" class="sidebar__nav--menu__item--btn"
         ><i class="fas fa-building fa-lg"></i>Jobs</a
       >
       <div class="sidebar__nav--menu__item__sub">

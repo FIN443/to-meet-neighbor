@@ -1,10 +1,10 @@
 const filebox = document.querySelectorAll(".write__form--filebox input");
+const file = filebox[0];
 const textbox = document.querySelector(".filebox-text");
 const text = document.querySelector(".write__form--filebox span");
 const exitBtn = document.querySelector(".write__form--exit");
 
 function haddleFile() {
-  const file = filebox[0];
   const fileName = file.value.split("\\");
   text.innerText = fileName[fileName.length - 1];
   text.style.color = "white";

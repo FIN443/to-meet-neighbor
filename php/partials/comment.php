@@ -4,10 +4,7 @@
       <span class="comment_date"><?php echo $c_new_date ?></span>
    </div>
    <div class="comment_content">
-      <p><?php echo $c_content ?></p>
-   </div>
-   <div class="comment_reply_btn">
-      <span >답글 달기</span>
+      <p><?=nl2br($c_content)?></p>
    </div>
 </div>
 <hr>

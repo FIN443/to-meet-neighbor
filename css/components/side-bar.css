@@ -17,9 +17,10 @@
   align-items: center;
   justify-content: center;
   width: 150px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   text-align: center;
+  margin-top: 10px;
 }
 
 .sidebar__title--span span:first-child {
@@ -32,11 +33,13 @@
   margin-top: 95px;
   font-size: 15px;
   width: var(--sidebar-margin);
+  position: relative;
+  top: -160px;
 }
 
 .sidebar__nav {
   position: absolute;
-  top: 280px;
+  top: 360px;
   left: 20px;
 }
 

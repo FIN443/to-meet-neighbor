@@ -21,7 +21,7 @@
             $c_content = $comments['c_content'];
             $c_nickname = $comments['c_nickname'];
             $c_date = $comments['c_create_date'];
-            $c_new_date = date("y년 m월 d일", strtotime($c_date));
+            $c_new_date = date("m월 d일", strtotime($c_date));
             include 'php/partials/comment.php';
         }
     }

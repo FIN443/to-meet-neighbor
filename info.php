@@ -77,7 +77,8 @@
 
 
     <footer></footer>
-    <script src="js/more.js"></script>
     <footer class="area"></footer>
+    <script src="js/more.js"></script>
+    <script src="js/clock.js"></script>
   </body>
 </html>

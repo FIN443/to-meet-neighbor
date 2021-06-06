@@ -9,11 +9,17 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 90px;
+  bottom: 40px;
   background-color: var(--search-box-color);
   height: 40px;
   border-radius: 40px;
-  padding: 9px;
+  padding: 4px;
+}
+
+@media screen and (max-height: 670px) {
+  .sidebar__search-box {
+    top: 590px;
+  }
 }
 
 .sidebar__search-box:hover .sidebar__search-box__input {

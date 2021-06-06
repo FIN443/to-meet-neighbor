@@ -5,7 +5,7 @@
 
     echo("
         <script>
-            location.href = './../../index.php';
+            history.go(-1);
         </script>
     ")
 ?>

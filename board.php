@@ -18,18 +18,17 @@
       <?php include './php/partials/top_btn.php'; ?>
     </a>
 
-    <header class="area"></header>
+    <header class="area">
+      <div class="board-header">
+        <h1>Board</h1>
+        <form action="write.php" method="post">
+          <input class="board__write-btn" type="submit" name="write" value="글쓰기" >
+        </form>
+      </div>
+    </header>
 
     <main class="board-screen area">
-      <?php 
-        if(isset($_SESSION['username'])) {
-          ?>
-          <form action="write.php" >
-            <input type="submit" value="write" >
-          </form>
-          <?php
-        }
-
+      <?php
         if(isset($_GET['type'])) {
           if($_GET['type'] == "all" || $_GET['type'] == "free" || $_GET['type'] == "jobs" || $_GET['type'] == "info" || $_GET['type'] == "study") {
             include './php/partials/board_thumbnail.php';
@@ -43,5 +42,6 @@
     </main>
 
     <footer class="area"></footer>
+    <script src="js/clock.js"></script>
   </body>
 </html>

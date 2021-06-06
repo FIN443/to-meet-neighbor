@@ -10,7 +10,6 @@
     />
   </head>
   <body>
-    <?php include './php/modules/db_login.php' ?>
 
     <nav class="sidebar">
       <?php include './php/partials/sidebar.php'; ?>
@@ -54,20 +53,14 @@
         <a href="#">계정 찾기</a>
         <a href="join.php">계정 생성</a>
 
-        <?php
-          if (isset($_POST["login_btn"])) {
-            if(!isset($row)) {
-              ?>
-                <span class="login-screen__alert">아이디 또는 비밀번호가 일치하지 않습니다.</span>
-              <?php
-            }
-          }
-        ?>
+        <span class="login-screen__alert">아이디 또는 비밀번호가 일치하지 않습니다.</span>
       </form>
     </main>
+
+    <?php include './php/modules/db_login.php' ?>
     
     <footer class="area"></footer>
-
+    <script src="js/clock.js"></script>
     <script src="js/login.js"></script>
   </body>
 </html>

@@ -1,0 +1,90 @@
+.todolist {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.js-toDoForm {
+  margin-bottom: 20px;
+}
+
+.js-toDoForm input {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 253, 245, 0.877);
+  width: 160px;
+  height: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 5px 20px;
+}
+
+.js-toDoForm input:focus {
+  outline: none;
+}
+
+.js-toDoList {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  padding: 10px 10px 5px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  height: 160px;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(220, 239, 255);
+  border-radius: 4px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.js-toDoList li {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  color: black;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.js-toDoList li > button {
+  margin-right: 10px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 6px;
+  cursor: pointer;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+}
+
+.js-toDoList li > button:first-child {
+  color: black;
+  background-color: rgb(174, 255, 172);
+}
+
+.js-toDoList li > button:first-child:hover {
+  background-color: rgb(62, 255, 56);
+}
+
+.js-toDoList li > button:nth-child(2) {
+  background-color: rgb(255, 211, 175);
+  padding: 2px 3px;
+}
+
+.js-toDoList li > button:nth-child(2):hover {
+  background-color: rgb(255, 138, 42);
+}
+
+.js-toDoList li > button:active {
+  transform: scale(0.9);
+}
+
+.js-toDoList li > span {
+  word-break: break-all;
+  text-decoration: none;
+  font-family: "Jua", sans-serif;
+  color: rgba(40, 40, 40, 0.7);
+  margin-left: 5px;
+}

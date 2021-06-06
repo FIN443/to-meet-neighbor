@@ -18,33 +18,25 @@
       <?php include './php/partials/top_btn.php'; ?>
     </a>
 
-    <!-- 게시글 댓글 나열 -->
-    
-    <!-- 댓글 등록했을 때 -->
-    <?php //include './php/partials/comment_submit.php'; ?>
-
-    <!-- 로그인 됬을 때 -->
     <?php
-      if(isset($_SESSION['userid'])) {
-    ?>
-    <?php
-      }
-      else {
-    ?>
-      <!-- 로그인 안됬을 때 -->
-    <?php
-      }
+    if(isset($_POST['submit'])) {
+      include "php/modules/db_comment.php";
+    }
     ?>
     
     <header class="area"></header>
 
     <main class="post-screen area">
       <div class="screen_whole">
-        <?php include './php/partials/comment_write.php'; ?>
-        <?php include './php/partials/comment_list.php'; ?>
+      <?php
+        include './php/modules/db_post.php';
+        include './php/partials/comment_write.php';
+        include './php/partials/comment_list.php';
+      ?>
       </div>
     </main>
         
     <footer class="area"></footer>
+    <script src="js/clock.js"></script>
   </body>
 </html>

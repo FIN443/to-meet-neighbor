@@ -1,5 +1,105 @@
 .main-screen {
+  display: grid;
+  grid-template-columns: minmax(360px, 2fr) minmax(540px, 3fr);
+  grid-template-rows: 240px 300px minmax(300px, 1fr);
+  max-width: 1200px;
+  height: 100vh;
+}
+
+.main__info,
+.main__todolist,
+.main__board,
+.main__content {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin: 20px 30px 0;
+  padding: 30px;
+  border-radius: 6px;
+  background-color: rgb(236, 246, 255);
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.main__info {
+  grid-column: span 1;
+  margin-right: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.main__info span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.main__info span:first-child {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main__info span:last-child {
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: "Jua", sans-serif;
+}
+
+.main__not_login {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main__todolist {
+  grid-column: span 1;
+  margin-left: 15px;
+}
+
+.main__board {
+  position: relative;
+  grid-column: span 2;
+  overflow: auto;
+}
+
+.main__board__posts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(230px, 1fr));
+  grid-template-rows: 200px;
+  gap: 30px;
+}
+
+.main__board--more {
+  display: inline-block;
+  position: absolute;
+  bottom: 6px;
+  right: 30px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(146, 190, 255);
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  transition: all 0.1s ease-in-out;
+}
+
+.main__board--more:hover {
+  background-color: rgb(66, 142, 255);
+}
+
+.main__board--more:active {
+  transform: scale(0.9);
+}
+
+.main__content {
+  grid-column: span 2;
+  margin-bottom: 30px;
+}
+
+.something {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
 }

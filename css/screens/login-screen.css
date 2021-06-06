@@ -156,11 +156,11 @@
 }
 
 .login-screen__alert {
-  position: absolute;
   color: rgba(255, 46, 46, 0.808);
   font-size: 16px;
   font-weight: 600;
   display: block;
   text-align: center;
   margin-top: 40px;
+  opacity: 0;
 }
