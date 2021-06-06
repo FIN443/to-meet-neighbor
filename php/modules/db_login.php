@@ -10,9 +10,13 @@
         if(isset($row)) {
             if (password_verify($user_pass, $row["u_pass"])) {
                 session_start();
+                $_SESSION["usernum"] = $row["u_num"];
                 $_SESSION["userid"] = $row["u_id"];
                 $_SESSION["username"] = $row["u_nickname"];
                 $_SESSION["useremail"] = $row["u_email"];
+                $u_date = $row["u_create_date"];
+                $_SESSION["userdate"] = date("Y년 m월 d일", strtotime($u_date));
+                $_SESSION["userimg"] = $row["u_image_url"];
                 ?>
                     <script>
                         history.go(-2);

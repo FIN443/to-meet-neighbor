@@ -15,10 +15,16 @@
             ];
             $hash = password_hash($user_pass, PASSWORD_BCRYPT, $options);
             $insert = mysqli_query($connect, "INSERT INTO `users` (`u_id`, `u_pass`, `u_nickname`, `u_email`) VALUES ('$user_id', '$hash', '$user_name', '$user_email')");
+            $select_all = mysqli_query($connect, "SELECT * FROM users WHERE u_id = '$user_id'");
+            $row = mysqli_fetch_array($select_all);
             session_start();
-            $_SESSION["userid"] = $user_id;
-            $_SESSION["username"] = $user_name;
-            $_SESSION["useremail"] = $user_email;
+            $_SESSION["usernum"] = $row["u_num"];
+            $_SESSION["userid"] = $row["u_id"];
+            $_SESSION["username"] = $row["u_nickname"];
+            $_SESSION["useremail"] = $row["u_email"];
+            $u_date = $row["u_create_date"];
+            $_SESSION["userdate"] = date("Y년 m월 d일", strtotime($u_date));
+            $_SESSION["userimg"] = $row["u_image_url"];
             ?>
             <script>
                 alert("정상가입되었습니다. 환영합니다 '<?= $user_name ?>'님");

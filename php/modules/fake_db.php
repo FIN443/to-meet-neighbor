@@ -6,5 +6,5 @@
     $comments = array(
         array('num' => 1, 'content' => 'python', 'user' => 'cydonia0211','date'=> '5월 29일'),
         array('num' => 2, 'content' => 'javascript', 'user' => 'jjhun1228','date'=> '5월 29일')
-    );
+    );  
 ?>
