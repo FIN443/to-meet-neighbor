@@ -28,29 +28,45 @@
     ?>
     <div class="mypage_whole_section">
       <div class="mypage_section">
-        <div class="user_img">
+        <div class="section_top">
+          <div class="user_img">
             <?php if(isset($_POST['submit'])){
               include 'php/partials/mypage2.php';
                 }
                 $user_img = $_SESSION['userimg'];
               ?>
-            <div class="mypage__info--img">
-              <img src="<?php echo "uploads/"."$user_img"?>">
+            <!--
+            <button class="" title="프로필 사진 바꾸기">
+                <img alt="프로필 사진 바꾸기" class="" src="<?php //echo "uploads/"."$user_img"?>">
+            </button>
+            <div>
+                <form method="post" action="" enctype="multipart/form-data" role="presentation">
+                  <input accept="image/jpeg,image/png" class="" type="file">
+                </form>
             </div>
-            <form method="post" action="" enctype="multipart/form-data">
-              <label for="image">프로필 이미지</label>
-              <input type="file" id="image" name="my_image">
-              <input type="submit" name="submit" value="Upload">
+            -->
+            
+            <form class="img_form" id="test" method="post" action="" enctype="multipart/form-data">
+              <label for="image">
+                <div class="mypage__info--img">
+                <img alt="프로필 사진 바꾸기" style='cursor:pointer' src="<?php echo "uploads/"."$user_img"?>">
+                </div>
+              </label>
+              <input class="profile_img" type="file" style="border=0" id="image" name="my_image">
+              <!--<input type="submit" name="submit" value="Upload">-->
             </form>
-        </div>
-        <div class="user_summary_info">
-          <div class="user_id">
-            <span class="id"><?php echo $_SESSION['userid'] ?></span>
+            <button class="img_submit" type="submit" name="submit" form="test">이미지 제출</button>
           </div>
-          <div class="user_subtitle">
-            <span class="sub_title"><?php echo $_SESSION['username'] ?></span>
+          <div class="user_summary_info">
+            <div class="user_id">
+              <span class="id"><?php echo $_SESSION['userid'] ?></span>
+            </div>
+            <div class="user_subtitle">
+              <span class="sub_title"><?php echo $_SESSION['username'] ?></span>
+            </div>
           </div>
         </div>
+        
         <div class="user_info">
           <div class="user_name">
           <!--<span class="name"><?php //echo "닉네임 : ".$_SESSION['username'] ?></span>-->

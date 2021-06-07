@@ -7,37 +7,67 @@
     padding: 20px 40px;
     background-color: white;
     width: 40em;
-    height: 40em;
+    height: 50em;
     margin: 200px 0 0 600px;
 }   
 
-.user_summary_info {
-    border-bottom: 1px solid #3498db;
-    display: flex;
-    flex-direction: column;
+.section_top{
+    display: inline-flex;
     width: 100%;
-    height: 100px;
-    margin-bottom: 30px;
+    border-bottom: 1px solid #3498db;
 }
-
 .user_img {
+    display: inline-block;
     padding: 10px 10px;
     border-radius: 1px;
     overflow: hidden;
 }
+
 .mypage__info--img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 60px;
+    margin: 0px -10px 0px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
     overflow: hidden
 }
 .mypage__info--img img {
     object-fit: cover;
     max-width: 100%;
 }
-
+.profile_img {
+    visibility: hidden;
+    cursor: pointer;
+}
+.img_form {
+    width: 100px;
+    height: 100px;
+}
+.img_submit {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 0 20px;
+    cursor: pointer;
+}
+.user_summary_info {
+    display: inline-flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100px;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
 
 .user_id {
     display: inline-block;
