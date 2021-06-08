@@ -55,7 +55,7 @@
               <input class="profile_img" type="file" style="border=0" id="image" name="my_image">
               <!--<input type="submit" name="submit" value="Upload">-->
             </form>
-            <button class="img_submit" type="submit" name="submit" form="test">이미지 제출</button>
+            <button class="img_submit" type="submit" name="submit" form="test">Upload</button>
           </div>
           <div class="user_summary_info">
             <div class="user_id">
@@ -66,7 +66,9 @@
             </div>
           </div>
         </div>
-        
+        <?php 
+          include 'php/modules/db_load_mypage.php';
+        ?>
         <div class="user_info">
           <div class="user_name">
           <!--<span class="name"><?php //echo "닉네임 : ".$_SESSION['username'] ?></span>-->
@@ -78,10 +80,10 @@
           <span class="join_date"><?php echo "생성 날짜 : ".$_SESSION['userdate'] ?></span>
           </div>
           <div class="user_post_num">
-          <span class="post_num"><?php echo "게시글 수 : " ?></span>
+          <span class="post_num"><?php echo "게시글 수 : ".$post_num ?></span>
           </div>
           <div class="user_comment_num">
-          <span class="comments_num"><?php echo "댓글 수 : " ?></span>
+          <span class="comments_num"><?php echo "댓글 수 : ".$comment_num ?></span>
           </div>
         </div>
         <div class="user_post">
