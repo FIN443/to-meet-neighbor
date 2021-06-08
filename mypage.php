@@ -35,24 +35,13 @@
                 }
                 $user_img = $_SESSION['userimg'];
               ?>
-            <!--
-            <button class="" title="프로필 사진 바꾸기">
-                <img alt="프로필 사진 바꾸기" class="" src="<?php //echo "uploads/"."$user_img"?>">
-            </button>
-            <div>
-                <form method="post" action="" enctype="multipart/form-data" role="presentation">
-                  <input accept="image/jpeg,image/png" class="" type="file">
-                </form>
-            </div>
-            -->
-            
             <form class="img_form" id="test" method="post" action="" enctype="multipart/form-data">
               <label for="image">
                 <div class="mypage__info--img">
                 <img alt="프로필 사진 바꾸기" style='cursor:pointer' src="<?php echo "uploads/"."$user_img"?>">
                 </div>
               </label>
-              <input class="profile_img" type="file" style="border=0" id="image" name="my_image">
+              <input class="profile_img" type="file"  id="image" name="my_image">
               <!--<input type="submit" name="submit" value="Upload">-->
             </form>
             <button class="img_submit" type="submit" name="submit" form="test">Upload</button>
@@ -70,9 +59,6 @@
           include 'php/modules/db_load_mypage.php';
         ?>
         <div class="user_info">
-          <div class="user_name">
-          <!--<span class="name"><?php //echo "닉네임 : ".$_SESSION['username'] ?></span>-->
-          </div>
           <div class="user_email">
           <span class="email"><?php echo "e-mail : ".$_SESSION['useremail'] ?></span>
           </div>

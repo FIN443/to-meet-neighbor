@@ -18,7 +18,18 @@
       <?php include './php/partials/top_btn.php'; ?>
     </a>
 
-    <header class="area"></header>
+    <?php 
+      include "php/modules/db_config.php";
+      $get_date = $_GET['text'];
+    ?>
+    <header class="area">
+      <div class="board-header">
+        <h1>Board</h1>
+        <form action="write.php" method="post">
+          <input class="board__write-btn" type="submit" name="write" value="글쓰기" >
+        </form>
+      </div>
+    </header>
     
     <main class="search-screen area">
     <div class="board">

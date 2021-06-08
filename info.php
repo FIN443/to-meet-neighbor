@@ -50,21 +50,21 @@
                 <div class="skill">
                   <div class="title">PHP</div>
                   <div class="progress">
-                    <div class="progress-bar p1"><span>55.1%</span></div>
+                    <div class="progress-bar p1"><span>47.1%</span></div>
                   </div>
                 </div>
 
                 <div class="skill">
                   <div class="title">CSS</div>
                   <div class="progress">
-                    <div class="progress-bar p2"><span>41.2%</span></div>
+                    <div class="progress-bar p2"><span>35.2%</span></div>
                   </div>
                 </div>
 
                <div class="skill">
                   <div class="title">JavaScript</div>
                   <div class="progress">
-                    <div class="progress-bar p3"><span>3.6%</span></div>
+                    <div class="progress-bar p3"><span>16.6%</span></div>
                  </div>
                 </div>
 

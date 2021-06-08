@@ -90,12 +90,12 @@
       </div>
     </li>
     <li class="sidebar__nav--menu__item" id="jobs">
-      <a href="#" class="sidebar__nav--menu__item--btn"
+      <a href="https://www.jobkorea.co.kr/" class="sidebar__nav--menu__item--btn"
         ><i class="fas fa-building fa-lg"></i>Jobs</a
       >
       <div class="sidebar__nav--menu__item__sub">
-        <a href="#">일간 채용</a>
-        <a href="#">공채 소식</a>
+        <a href="https://www.jobkorea.co.kr/recruit/home">일간 채용</a>
+        <a href="https://www.jobkorea.co.kr/starter/">공채 소식</a>
       </div>
     </li>
     <li class="sidebar__nav--menu__item" id="info">
