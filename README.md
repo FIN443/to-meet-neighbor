@@ -105,6 +105,7 @@ PHP를 사용하여 로그인, 로그아웃, 게시판, 글쓰기, ~~취업정�
 | u_email    | char(40) | not null |                                 | 이메일 주소    |
 | u_date     | long     | not null |                                 | 계정 생성 날짜 |
 | u_role     | char(1)  | not null |                                 | 역할(우선도)   |
+| u_image_url| text     | not null |                                 | 프로필 이미지  |
 
 #### posts 테이블
 
