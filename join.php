@@ -88,5 +88,18 @@
     <footer class="area"></footer>
     <script src="js/clock.js"></script>
     <script src="./js/join.js"></script>
+    <?php
+      if(isset($check_id) || isset($check_name)) {
+        ?>
+        <script>
+          const validResult = document.querySelectorAll(".join-result--text");
+          document.addEventListener("keyup", function() {
+            validResult[0].style.opacity = "0";
+            validResult[1].style.opacity = "0";
+          });
+        </script>
+      <?php
+      }
+    ?>
   </body>
 </html>
