@@ -11,7 +11,7 @@
   </div>
 </a>
 <div class="sidebar__search-box">
-  <form action="./search.php" method="get">
+  <form action="search.php" method="get">
     <input
       class="sidebar__search-box__input"
       type="text"
