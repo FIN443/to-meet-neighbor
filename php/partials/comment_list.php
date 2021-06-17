@@ -1,6 +1,7 @@
 <?php
     // fakeDB
     include 'php/modules/db_config.php';
+    include 'php/modules/db_img.php';
 
     $p_num = $_GET['num'];
     $comments_sql = "SELECT * FROM comments WHERE c_post_no=$p_num ORDER BY c_num DESC";

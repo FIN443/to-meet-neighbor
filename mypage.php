@@ -22,6 +22,14 @@
 
     <main class="mypage-screen area">
     <?php
+    if(!isset($_SESSION['userid'])) {
+    ?>
+    <script>
+      alert("로그인 해주세요.");
+      location.href = "login.php";
+    </script>
+    <?php
+    }
     include 'php/modules/db_config.php';
     
     if (isset($_SESSION['userid'])) {
@@ -33,7 +41,7 @@
             <?php if(isset($_POST['submit'])){
               include 'php/partials/mypage2.php';
                 }
-                $user_img = $_SESSION['userimg'];
+              include 'php/modules/db_img.php';
               ?>
             <form class="img_form" id="test" method="post" action="" enctype="multipart/form-data">
               <label for="image">
@@ -42,7 +50,6 @@
                 </div>
               </label>
               <input class="profile_img" type="file"  id="image" name="my_image">
-              <!--<input type="submit" name="submit" value="Upload">-->
             </form>
             <button class="img_submit" type="submit" name="submit" form="test">Upload</button>
           </div>
@@ -56,7 +63,7 @@
           </div>
         </div>
         <?php 
-          include 'php/modules/db_load_mypage.php';
+          include 'php/modules/db_load_mypage.php'; 
         ?>
         <div class="user_info">
           <div class="user_email">
