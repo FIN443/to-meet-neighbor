@@ -38,11 +38,15 @@
       <div class="mypage_section">
         <div class="section_top">
           <div class="user_img">
-            <?php if(isset($_POST['submit'])){
+            <?php
+            if(isset($_POST['submit'])){
               include 'php/partials/mypage2.php';
-                }
-              include 'php/modules/db_img.php';
-              ?>
+            }
+            $user_id = $_SESSION['userid'];
+            $data_img = mysqli_query($connect, "SELECT u_image_url FROM users WHERE u_id = '$user_id' ");
+            $img_arr = mysqli_fetch_row($data_img);
+            $user_img = $img_arr[0];
+            ?>
             <form class="img_form" id="test" method="post" action="" enctype="multipart/form-data">
               <label for="image">
                 <div class="mypage__info--img">
