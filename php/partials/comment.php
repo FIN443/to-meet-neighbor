@@ -1,7 +1,17 @@
 <?php include "php/modules/db_img.php";?>
 <div class="comment_section">
    <div class="comment_user_img">
-      <img class="u_img" src="<?php echo "uploads/"."$user_img"?>">
+   <?php
+      if($user_img == "") {
+      ?>
+         <i class="fas fa-user u_img"></i>
+      <?php
+      } else {
+      ?>
+         <img class="u_img" src="<?php echo "uploads/"."$user_img"?>">
+      <?php
+      }
+      ?>
    </div>
    <div class="comment_view"> 
       <div class="comment_user">

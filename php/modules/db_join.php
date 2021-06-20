@@ -14,7 +14,7 @@
                 'cost' => 10,
             ];
             $hash = password_hash($user_pass, PASSWORD_BCRYPT, $options);
-            $insert = mysqli_query($connect, "INSERT INTO `users` (`u_id`, `u_pass`, `u_nickname`, `u_email`) VALUES ('$user_id', '$hash', '$user_name', '$user_email')");
+            $insert = mysqli_query($connect, "INSERT INTO `users` (`u_id`, `u_pass`, `u_nickname`, `u_email`, `u_image_url`) VALUES ('$user_id', '$hash', '$user_name', '$user_email', '')");
             $select_all = mysqli_query($connect, "SELECT * FROM users WHERE u_id = '$user_id'");
             $row = mysqli_fetch_array($select_all);
             session_start();

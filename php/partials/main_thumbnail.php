@@ -26,12 +26,12 @@
                 <div class="thumbnail--img">
                 <?php
                 if($image_url == "") {
-                        echo "<p>".$content."</p>";
-                    } else {
-                        ?>
-                        <img src="uploads/<?=$image_url?>" >
-                        <?php
-                    }
+                    echo "<p>".$content."</p>";
+                } else {
+                ?>
+                    <img src="uploads/<?=$image_url?>" >
+                <?php
+                }
                 $comments_sql = "SELECT * FROM comments WHERE c_post_no=$post_num ORDER BY c_num DESC";
                 $comments_select = mysqli_query($connect, $comments_sql);
                 $comments_rows = mysqli_num_rows($comments_select);
