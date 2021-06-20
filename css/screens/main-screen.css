@@ -96,6 +96,14 @@
 .main__content {
   grid-column: span 2;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
 }
 
 .something {

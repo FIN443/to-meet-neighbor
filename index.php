@@ -58,7 +58,25 @@
         <a class="main__board--more" href="board.php?type=all">More</a>
       </div>
       <div class="main__content">
-        <span>추가 컨텐츠</span>
+        <a href="https://www.naver.com/">
+          <img class="main__icon" src="images/naver.png">
+        </a>
+        <a href="https://www.google.com/">
+          <img class="main__icon" src="images/google.png">
+        </a>
+        <a href="https://www.youtube.com/">
+          <img class="main__icon" src="images/youtube.png">
+        </a>
+        <a href="https://velog.io/">
+          <img class="main__icon" src="images/velog.png">
+        </a>
+        <a href="https://github.com/">
+          <img class="main__icon" src="images/github.png">
+        </a>
+        <a href="https://okky.kr/">
+          <img class="main__icon" src="images/okky.ico">
+        </a>
+        
       </div>
     </main>
 
